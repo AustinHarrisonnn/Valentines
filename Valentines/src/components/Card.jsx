@@ -1,34 +1,15 @@
 import React from 'react';
-import { ElevenLabsClient } from "elevenlabs";
-import { Readable } from "stream";
-
-const client = new ElevenLabsClient({
-    apiKey: "sk_00929336286cc49b5a9503e412aa9d9970e50996c4c172d6",
-});
+import { generateSpeech } from '../utils/textToSpeechUtils';
 
 const Card = (props) => {
 
     const handleYesClicked = async () => {
         try {
-            const audioStream = await client.textToSpeech.convertAsStream("nPczCjzI2devNBz1zQrb", {
-                text: "Hi!",
-                model_id: "eleven_multilingual_v2",
-                
-            });
-
-            const audioChunks = [];
-            for await (const chunk of audioStream) {
-                audioChunks.push(chunk);
-            }
-            const audioBlob = new Blob(audioChunks, { type: 'audio/mpeg' });
-
-            const audioUrl = URL.createObjectURL(audioBlob);
-            const audio = new Audio(audioUrl);
-            audio.play();
-        } catch (error) {
-            console.error('could not generate audio', error);
+            await generateSpeech("Hi!");
+        } catch {
+            alert("Could not generate this audio");
         }
-        };
+    };
 
     return (
         <div className="card">
