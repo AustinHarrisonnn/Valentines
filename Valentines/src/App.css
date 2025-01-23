@@ -18,7 +18,7 @@ body, .App {
   font-size: 14px;  
   color: red;  
   opacity: 0;  
-  animation: fall 5s infinite ease-in;
+  animation: fall 7s infinite ease-in;
 }
 
 @keyframes fall {

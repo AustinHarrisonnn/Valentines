@@ -6,7 +6,7 @@ const Card = (props) => {
     // yes button clicked function
     const handleYesClicked = async () => {
         try {
-            await generateSpeech("Yippie, yay, wowza, yippers!");
+            await generateSpeech("Yippie! You are totally awesome sauce. You get five big booms. BOOM! BOOM! BOOM! BOOM! BOOM!");
         } catch {
             alert("Could not generate this audio");
         }
@@ -15,7 +15,7 @@ const Card = (props) => {
     // no button clicked function
     const handleNoClicked = async () => {
         try {
-            await generateSpeech("Boooo! You pressed the wrong button.");
+            await generateSpeech("Boooo! You pressed the wrong button. Me and the cosco guys don't approve of this.");
         } catch {
             alert("Could not generate this audio");
         }

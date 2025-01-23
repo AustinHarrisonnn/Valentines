@@ -25,7 +25,7 @@ const HeartRain = () => {
         };
 
         // generates hearts every 100ms
-        const interval = setInterval(generateHeart, 290);
+        const interval = setInterval(generateHeart, 350);
 
         return () => clearInterval(interval);
     }, []);
