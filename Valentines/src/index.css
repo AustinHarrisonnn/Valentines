@@ -26,13 +26,13 @@ h2 {
 
 @keyframes pulse {
   0% {
-    transform: scale(1); /* Original size */
+    transform: scale(1); 
   }
   50% {
-    transform: scale(1.5); /* Grow to 120% size */
+    transform: scale(1.5); 
   }
   100% {
-    transform: scale(1); /* Return to original size */
+    transform: scale(1); 
   }
 }
 
@@ -86,7 +86,7 @@ button {
 
 .button1,
 .button2 {
-  padding: 10px 20px; /* Add some padding for larger buttons */
+  padding: 10px 20px; 
   border-radius: 5px;
   cursor: pointer;
 }
@@ -133,7 +133,6 @@ button {
 
 .button2:active {
   background-color: rgb(255, 56, 86);
-  /*50, 168, 80*/
   box-shadow: rgb(201, 46, 70) 0px 0px 0px 0px;
   transform: translateY(5px);
   transition: 200ms;

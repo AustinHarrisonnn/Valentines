@@ -3,6 +3,7 @@ import { generateSpeech } from '../utils/textToSpeechUtils';
 
 const Card = (props) => {
 
+    // yes button clicked function
     const handleYesClicked = async () => {
         try {
             await generateSpeech("Yippie, yay, wowza, yippers!");
@@ -11,6 +12,7 @@ const Card = (props) => {
         }
     };
 
+    // no button clicked function
     const handleNoClicked = async () => {
         try {
             await generateSpeech("Boooo! You pressed the wrong button.");
@@ -22,6 +24,7 @@ const Card = (props) => {
     return (
         <div className="card">
             <div className="head">
+                {/*props.image passed through in Table.jsx*/}
                 <img src={props.image} alt="#" className="card-image" />
             </div>
             <div className="body">
