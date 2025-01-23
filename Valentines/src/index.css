@@ -3,29 +3,64 @@
 }
 
 h1 {
-  color: white;
-  text-shadow: 2px 2px 4px #000000;
+  color: #FEF2F4;
+  text-shadow: 2px 2px 4px #FCC8D1;
+  font-size: 50pt;
+  font-style: italic;
+}
+
+h2 {
+  text-shadow: 2px 2px 4px #FCC8D1
+}
+
+.hearts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.hearts img {
+  animation: pulse 2s infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1); /* Original size */
+  }
+  50% {
+    transform: scale(1.5); /* Grow to 120% size */
+  }
+  100% {
+    transform: scale(1); /* Return to original size */
+  }
 }
 
 .body h2 {
-  color: rgb(80, 53, 53);
+  color: #FEF2F4;
 }
 
 button {
-  padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
 }
 
 .card {
+  border-style: outset;
+  border-width: 10px;
+  border-color: #dac9ccbb;
   width: 450px;
-  height: 570px;
+  height: 590px;
   justify-content: space-between;
   display: flex;
   flex-direction: column;
-  background-color: antiquewhite;
-  border-radius: 12px;
-  box-shadow: 10px 15px 5px lightcoral;
+  background-color: #cf3c66;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.1);
 }
 
 .body {
@@ -34,7 +69,7 @@ button {
 
 .card-image {
   height: 350px;
-  width: 350px;
+  width: 370px;
   border-radius: 12px;
 }
 
@@ -43,15 +78,63 @@ button {
   padding-top: 2rem;
 }
 
-.button1 {
-  background-color: aquamarine;
-  height: 80px;
-  width: 100px;
-  border-radius: 12px;
+.button-container {
+  display: flex;
+  gap: 40px;
+  padding-bottom: 2rem;
 }
+
+.button1,
 .button2 {
-  background-color: rgb(224, 139, 231);
+  padding: 10px 20px; /* Add some padding for larger buttons */
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: #FFABAB;
+  letter-spacing: 1.5px;
   height: 80px;
   width: 100px;
   border-radius: 12px;
+  border: 0;
+  transition: all 0.3s ease;
+  box-shadow: rgb(197, 26, 52) 0px 10px 0px 0px;
+  color: #cf3c66;
+}
+
+.button1:hover {
+  box-shadow: rgb(201, 46, 70) 0px 7px 0px 0px;
+}
+
+.button1:active {
+  background-color: rgb(255, 56, 86);
+  /*50, 168, 80*/
+  box-shadow: rgb(201, 46, 70) 0px 0px 0px 0px;
+  transform: translateY(5px);
+  transition: 200ms;
+}
+
+.button2 {
+  background-color: #FFABAB;
+  letter-spacing: 1.5px;
+  height: 80px;
+  width: 100px;
+  border-radius: 12px;
+  border: 0;
+  transition: all 0.3s ease;
+  box-shadow: rgb(197, 26, 52) 0px 10px 0px 0px;
+  color: #cf3c66;
+}
+
+.button2:hover {
+  box-shadow: rgb(201, 46, 70) 0px 7px 0px 0px;
+}
+
+.button2:active {
+  background-color: rgb(255, 56, 86);
+  /*50, 168, 80*/
+  box-shadow: rgb(201, 46, 70) 0px 0px 0px 0px;
+  transform: translateY(5px);
+  transition: 200ms;
 }

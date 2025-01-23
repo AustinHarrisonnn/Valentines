@@ -25,9 +25,11 @@ const Card = (props) => {
                 <img src={props.image} alt="#" className="card-image" />
             </div>
             <div className="body">
-                <h2>Will ju be my valentine?</h2>
-                <button type="button" className="button1" onClick={handleYesClicked}>Yes</button>
-                <button type="button" className="button2" onClick={handleNoClicked}>No</button>
+                <h2>Will ju be my valentine?!?</h2>
+                <div className="button-container">
+                    <button type="button" className="button1" onClick={handleYesClicked}>Yes</button>
+                    <button type="button" className="button2" onClick={handleNoClicked}>No</button>
+                </div>
             </div>
         </div>
     );
