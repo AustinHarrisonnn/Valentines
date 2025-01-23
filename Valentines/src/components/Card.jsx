@@ -5,7 +5,15 @@ const Card = (props) => {
 
     const handleYesClicked = async () => {
         try {
-            await generateSpeech("Hi!");
+            await generateSpeech("Yippie, yay, wowza, yippers!");
+        } catch {
+            alert("Could not generate this audio");
+        }
+    };
+
+    const handleNoClicked = async () => {
+        try {
+            await generateSpeech("Boooo! You pressed the wrong button.");
         } catch {
             alert("Could not generate this audio");
         }
@@ -19,7 +27,7 @@ const Card = (props) => {
             <div className="body">
                 <h2>Will ju be my valentine?</h2>
                 <button type="button" className="button1" onClick={handleYesClicked}>Yes</button>
-                <button type="button" className="button2">No</button>
+                <button type="button" className="button2" onClick={handleNoClicked}>No</button>
             </div>
         </div>
     );
