@@ -6,7 +6,7 @@ A simple website that displays a card with text asking the user if they would li
 ## Features
 
 - Heart rain
-- Unique audio feedback from each button
+- Unique audio feedback from each button using ElevenLabs text to speech API
 
 
 ## Demo
