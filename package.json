@@ -1,5 +1,5 @@
 {
-  "homepage": "https://austinharrisonnn.github.io/valentines-day",
+  "homepage": "https://austinharrisonnn.github.io/AustinHarrisonnn.github.io-valentines-day",
   "name": "valentines",
   "private": true,
   "version": "0.0.0",
@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "axios": "^1.7.9",
